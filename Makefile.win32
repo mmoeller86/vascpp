@@ -1,0 +1,19 @@
+CC=cl
+LINK=link
+CFLAGS=
+CPPFLAGS=
+
+OBJS=vas.obj win32.obj
+all: vas_test.exe
+
+vas.obj: vas.cpp vas.h win32.h
+	$(CC) /c $(CFLAGS) $(CPPFLAGS) vas.cpp
+	
+win32.obj: win32.cpp win32.h
+	$(CC) /c $(CFLAGS) $(CPPFLAGS) win32.cpp
+	
+vas_test.obj: vas_test.cpp win32.h vas.h
+	$(CC) /c $(CFLAGS) $(CPPFLAGS) vas_test.cpp
+	
+vas_test.exe: $(OBJS) vas_test.obj
+	$(LINK)/out:vas_test.exe $(OBJS) vas_test.obj
