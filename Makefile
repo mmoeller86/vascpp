@@ -26,4 +26,4 @@ vas_test.exe: libvas.a vas_test.o
 	$(LINK) -o vas_test vas_test.o libvas.a
 
 clean:
-	rm -f vas_test.exe $(OBJS) vas_test.o
+	rm -f vas_test.exe libvas.a $(OBJS) vas_test.o

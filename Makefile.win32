@@ -23,4 +23,4 @@ vas_test.exe: vas.lib vas_test.obj
 	$(LINK)/out:vas_test.exe vas_test.obj vas.lib
 
 clean:
-	del vas_test.exe $(OBJS) vas_test.obj
+	del vas_test.exe vas.lib $(OBJS) vas_test.obj
