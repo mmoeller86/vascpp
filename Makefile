@@ -16,4 +16,7 @@ vas_test.o: vas_test.cpp win32.h vas.h
 	$(CC) -c $(CFLAGS) $(CPPFLAGS) vas_test.cpp
 	
 vas_test.exe: $(OBJS) vas_test.o
-	$(LINK) -o vas_test.exe $(OBJS) vas_test.o
+	$(LINK) -o vas_test $(OBJS) vas_test.o
+
+clean:
+	rm -f vas_test.exe $(OBJS) vas_test.o

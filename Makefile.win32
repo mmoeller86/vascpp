@@ -17,3 +17,6 @@ vas_test.obj: vas_test.cpp win32.h vas.h
 	
 vas_test.exe: $(OBJS) vas_test.obj
 	$(LINK)/out:vas_test.exe $(OBJS) vas_test.obj
+
+clean:
+	del vas_test.exe $(OBJS) vas_test.obj
